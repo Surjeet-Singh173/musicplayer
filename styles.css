@@ -1,0 +1,294 @@
+body{
+    margin:0px;
+}
+header{
+    background-color: black;
+}
+.nav-links{
+    visibility: visible;
+    display: flex;
+}
+#buttonMenu{
+    visibility: hidden;
+    display:none;
+    transition: all 0.5s ease-in-out;
+}
+
+#dropdown-menu{
+    height:0px;
+    width:0px;
+    top:114px;
+    right:0%;
+    visibility:none;
+    position:absolute;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+}
+#dropdown-menu>a{
+    text-decoration: none;
+    padding-bottom: 20px;
+    position: absolute;
+    right:6%;
+    top:8%;
+    color:white;
+
+}
+#dropdown-menu>a:hover{
+    color:crimson;
+}
+.dropdown-item{
+    width:100%;
+    list-style:none;
+    padding-top: 12px;
+    margin-left: -30px;
+    padding-left: 5px;
+    font-size: 3rem;
+    border-left:12px solid darkturquoise;
+    border-bottom-left-radius: 5%;
+    border-bottom: 2px solid cadetblue;
+    background-color: black;
+}
+.dropdown-item a:hover{
+    color:lightseagreen;
+}
+.dropdown-item>a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+}
+
+#header-container{
+    height: 120px;
+}
+
+@media screen and (max-width:2000px ){
+
+    .font{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #header-container{
+        padding:20px;
+        margin-bottom: 20px;
+        display: flex;
+    }
+    #logo-container{
+        padding: 10px;
+        margin-right:20px;
+    }
+    .logo{
+        height:100px;
+        width: 100px;
+        background-image: linear-gradient(45deg ,lightseagreen,darkviolet);
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    .buttonMenu{
+        visibility: none;
+        display: none;
+    }
+    .horizontal-nav{
+        display: inline-block;
+        width:95%;
+        position: relative;
+        top:2%;
+    }
+    .horizontal-nav ul{
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        margin-top:35px;
+    }
+    .horizontal-nav li{
+        list-style:none;
+        display:inline-block;
+    }
+    .favourite{
+        margin-left:0%;
+    }
+    .input{
+        margin-left: 50%;
+        width:20%;
+        height:1.8rem;
+        background-color:white;
+        border-radius:20px;
+        padding-left:10px;
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    .input input{
+        position:relative;
+        border:none;
+        height:1.5rem;
+        width:60%;
+        font-size: 1.2rem;
+        margin-left:2px;
+    }
+    input:focus{ 
+        outline:none;
+    }
+    .notification{
+        margin-left:5%;
+        padding:14px
+    }
+    .profile{
+        margin-left:2%;
+        padding:14px;
+    }
+}
+@media screen and (max-width:1800px){
+    
+    .horizontal-nav{
+        top:10%;
+    }
+    .font{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .input{
+        position: absolute;
+        min-width: 300px;
+        right:20%;
+    }
+    .notification{
+        position: absolute;
+        right:12%;
+    }
+    .profile{
+        position: absolute;
+        right:5%;
+    }
+    .buttonMenu{
+        visibility: none;
+        display: none;
+    }
+}
+@media screen and (max-width:1100px){
+    .horizontal-nav{
+        margin-left: -40px;
+    }
+    .font{
+        font-size: 1.3rem;
+    }
+    .input{
+        position: absolute;
+        right:30%;
+        min-width: 200px;
+    }
+    .notification{
+        position: absolute;
+        right:15%;
+    }
+    .profile{
+        position: absolute;
+        right:5%;
+    }
+    .buttonMenu{
+        visibility: none;
+        display: none;
+    } 
+}
+@media screen and (max-width:800px){
+    #header-container{
+        height:90px;
+    }
+    .logo{
+        height:75px;
+        width:75px;
+        margin-top: 10px;
+    }
+    .horizontal-nav{
+        margin-left: 2%;
+        top:2%;
+    }
+    .input{
+        position: absolute;
+        right:45%;
+        width:50%;
+    }
+    #logo-container{
+        padding: 0px;
+        margin-right:1px;
+    }
+    .favourite{
+        visibility: hidden;
+    }
+
+    .notification{
+        position:absolute;
+        right:20%;
+    }
+    .profile{
+        margin-left:4%;
+    }
+    .buttonMenu{
+        visibility: none;
+        display: none;
+    }
+}
+@media screen and (max-width:684px) {
+    #header-container{
+        height:90px;
+    }
+    .nav-links{
+        display: none;
+        visibility: hidden;
+    }
+    #buttonMenu{
+        display: inline;
+        position:absolute;
+        top:40%;
+        right:10%;
+        visibility: visible;
+        color:white;
+    }
+    #dropdown-menu:target{
+        height:300px;
+        width:300px;
+        top:114px;
+        right:0%;
+        border-bottom-left-radius: 10px;
+        margin-right:0%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
+        visibility: visible;
+    }
+    
+}
+
+
+li .fa-2xl, .fa-heart{
+    color:white;
+}
+.notification:hover{
+    border:2px solid lightgray;
+    box-shadow: 0px 0px 6px 2px lightgray;
+    border-radius: 50%;
+}
+.profile:hover{
+    border:2px solid lightgray;
+    box-shadow: 0px 0px 6px 2px lightgray;
+    border-radius: 50%;
+
+}
+.logo:hover{
+    border:2px solid lightgrey;
+    box-shadow: 0px 0px 6px 2px lightgray;
+    border-radius: 50%;
+
+}
+
+.favourite i:hover{
+    color:crimson;
+
+}
+#buttonMenu:hover, .notification i:hover, .profile i:hover{
+    color:dodgerblue;
+}
+
